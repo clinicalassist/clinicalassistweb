@@ -11,21 +11,35 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .medical-gradient { background: radial-gradient(circle at top right, #1e40af, #1e3a8a, #0f172a); }
-        /* Optimization for mobile touch targets */
-        .touch-target { min-height: 48px; }
+        
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-white selection:bg-blue-500/30">
 
-    <header class="relative min-h-screen flex flex-col items-center justify-center px-6 medical-gradient">
+    <div class="fixed top-0 w-full z-50 bg-blue-600/10 backdrop-blur-md border-b border-white/10 py-2 overflow-hidden">
+        <div class="animate-marquee text-xs md:text-sm font-medium tracking-widest text-blue-200 uppercase">
+            &nbsp;&nbsp;&nbsp;&nbsp; "The eyes only see what the mind is prepared to comprehend" &nbsp;&nbsp;&nbsp;&nbsp; — Clinical Intelligence for Professionals &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <header class="relative min-h-screen flex flex-col items-center justify-center px-6 medical-gradient pt-12">
         <div class="z-10 text-center max-w-4xl">
-            <img src="splash.png" alt="ClinicalAssist Logo" class="w-32 h-32 md:w-36 md:h-36 mx-auto mb-8 rounded-3xl shadow-2xl">
+            <img src="splash.png" alt="ClinicalAssist Logo" class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-6 rounded-3xl shadow-2xl">
             
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-200">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-200">
                 ClinicalAssist
             </h1>
             <p class="text-base md:text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed px-4">
-                Precision medicine at your fingertips. Access 15,000+ learning modules and clinical calculators instantly on your Android device.
+                Clinical excellence at your fingertips. Access 15,000+ deep-dive medical records and advanced diagnostic calculators instantly.
             </p>
 
             <div class="flex justify-center px-4">
@@ -41,38 +55,38 @@
     <section class="py-16 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="glass p-6 rounded-3xl">
             <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 text-blue-400">
-                <i class="fas fa-pills text-xl"></i>
+                <i class="fas fa-microscope text-xl"></i>
             </div>
-            <h3 class="text-lg font-bold mb-2">Drug Intelligence</h3>
-            <p class="text-slate-400 text-sm leading-snug">Deep-dive data on 15,000+ drugs with indication-specific MoA and pediatric dosing.</p>
+            <h3 class="text-lg font-bold mb-2">Medical Intelligence</h3>
+            <p class="text-slate-400 text-sm leading-snug">Deep-dive data on 15,000+ drugs with indication-specific MoA and advanced pediatric dosing logic.</p>
         </div>
         <div class="glass p-6 rounded-3xl">
             <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4 text-indigo-400">
-                <i class="fas fa-notes-medical text-xl"></i>
+                <i class="fas fa-briefcase-medical text-xl"></i>
             </div>
             <h3 class="text-lg font-bold mb-2">Disease Insights</h3>
-            <p class="text-slate-400 text-sm leading-snug">Detailed differentials and lifestyle modifications for 1,100+ conditions.</p>
+            <p class="text-slate-400 text-sm leading-snug">Detailed differentials and lifestyle modifications for 1,100+ conditions based on 2026 standards.</p>
         </div>
         <div class="glass p-6 rounded-3xl">
             <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 text-cyan-400">
                 <i class="fas fa-calculator text-xl"></i>
             </div>
-            <h3 class="text-lg font-bold mb-2">Clinical Calculators</h3>
-            <p class="text-slate-400 text-sm leading-snug">Accurate 2026-validated CrCl, GFR, and Pediatric dose calculators.</p>
+            <h3 class="text-lg font-bold mb-2">Clinical Tools</h3>
+            <p class="text-slate-400 text-sm leading-snug">Accurate 2026-validated CrCl, GFR, and specialized medical dose calculators for acute care.</p>
         </div>
     </section>
 
     <footer class="bg-slate-900/50 border-t border-white/5 pt-12 pb-8 px-6 text-center">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl font-bold mb-2">Seshkalp</h2>
-            <p class="text-slate-400 text-sm mb-10 italic">"Precision in medicine, Compassion in Care."</p>
+            <h2 class="text-2xl font-bold mb-2 text-white">Seshkalp</h2>
+            <p class="text-slate-400 text-sm mb-10 italic">"Precision in Medicine, Compassion in Care."</p>
             
             <div class="flex flex-col gap-4 mb-10 items-center">
-                <a href="mailto:clinicalassist.center@gmail.com" class="flex items-center gap-3 touch-target glass px-6 py-3 rounded-full w-full max-w-xs justify-center active:bg-white/10">
+                <a href="mailto:clinicalassist.center@gmail.com" class="flex items-center gap-3 glass px-6 py-3 rounded-full w-full max-w-xs justify-center active:bg-white/10 transition-colors">
                     <i class="fas fa-envelope text-blue-400"></i>
                     <span class="text-sm truncate">clinicalassist.center@gmail.com</span>
                 </a>
-                <a href="tel:+917621980993" class="flex items-center gap-3 touch-target glass px-6 py-3 rounded-full w-full max-w-xs justify-center active:bg-white/10">
+                <a href="tel:+917621980993" class="flex items-center gap-3 glass px-6 py-3 rounded-full w-full max-w-xs justify-center active:bg-white/10 transition-colors">
                     <i class="fas fa-phone-alt text-blue-400"></i>
                     <span class="text-sm">+91 76219 80993</span>
                 </a>
