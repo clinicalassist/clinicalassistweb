@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicalAssist | sheshkalp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .medical-gradient { background: radial-gradient(circle at top right, #1e40af, #1e3a8a, #0f172a); }
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="bg-slate-950 text-white selection:bg-blue-500/30">
+
+    <header class="relative min-h-screen flex flex-col items-center justify-center px-6 medical-gradient">
+        <div class="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-30"></div>
+            <div class="absolute top-1/2 -right-24 w-80 h-80 bg-indigo-600 rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <div class="z-10 text-center max-w-4xl">
+            <img src="splash.png" alt="ClinicalAssist Logo" class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-8 rounded-3xl shadow-2xl transition-transform hover:scale-105">
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-200">
+                ClinicalAssist
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Precision medicine at your fingertips. Access 15,000+ drug records and 2026 clinical calculators instantly.
+            </p>
+
+            <a href="https://play.google.com/store/apps/details?id=com.clinicalassist.v1" 
+               target="_blank"
+               class="inline-block transition-transform hover:-translate-y-1">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-12 md:h-14 btn-glow rounded-xl" alt="Get it on Google Play">
+            </a>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-3xl group hover:bg-white/5 transition-all">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-pills text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Drug Intelligence</h3>
+            <p class="text-slate-400 text-sm">Deep-dive data on 15,000+ drugs with indication-specific MoA and pediatric dosing.</p>
+        </div>
+        <div class="glass p-8 rounded-3xl group hover:bg-white/5 transition-all">
+            <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 text-indigo-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-notes-medical text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Disease Insights</h3>
+            <p class="text-slate-400 text-sm">Detailed differentials and lifestyle modifications for 1,000+ conditions.</p>
+        </div>
+        <div class="glass p-8 rounded-3xl group hover:bg-white/5 transition-all">
+            <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6 text-cyan-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-calculator text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Clinical Calculators</h3>
+            <p class="text-slate-400 text-sm">Accurate 2026-validated CrCl, GFR, and Pediatric dose calculators.</p>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900/50 border-t border-white/5 pt-16 pb-12 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Sheshkalp</h2>
+            <p class="text-slate-400 max-w-md mx-auto mb-10 italic">"Precision in medicine, Compassion in Care."</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12">
+                <a href="mailto:clinicalassist.center@gmail.com" class="flex items-center gap-4 group hover:text-blue-400 transition-all">
+                    <div class="w-12 h-12 glass rounded-full flex items-center justify-center text-blue-400 group-hover:bg-blue-400/20 transition-colors">
+                        <i class="fas fa-envelope text-lg"></i>
+                    </div>
+                    <span class="text-slate-300 font-medium group-hover:text-blue-400">clinicalassist.center@gmail.com</span>
+                </a>
+
+                <a href="tel:+917621980993" class="flex items-center gap-4 group hover:text-blue-400 transition-all">
+                    <div class="w-12 h-12 glass rounded-full flex items-center justify-center text-blue-400 group-hover:bg-blue-400/20 transition-colors">
+                        <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+                    <span class="text-slate-300 font-medium group-hover:text-blue-400">+91 76219 80993</span>
+                </a>
+            </div>
+
+            <div class="border-t border-white/5 pt-8">
+                <img src="splash.png" class="w-10 h-10 mx-auto mb-4 grayscale opacity-40" alt="Sheshkalp Logo">
+                <p class="text-slate-500 text-xs uppercase tracking-widest font-semibold">sheshkalp &copy; 2026</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
